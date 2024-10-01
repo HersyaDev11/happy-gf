@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background-color: #f0f8ff;
+   color: #333;
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   background-color: #ff69b4;
+   color: white;
+}
+
+header .logo {
+   font-size: 24px;
+   font-weight: bold;
+  
+}
+
+header nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+header nav ul li {
+   margin-left: 20px;
+}
+
+header nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.hero {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 80vh;
+   background: url('happy-girl-background.jpg') no-repeat center center/cover;
+}
+
+.hero-text {
+   text-align: center;
+   color: white;
+   background: rgba(0, 0, 0, 0.5);
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.about-section, .gallery-section, .footer {
+   padding: 50px 20px;
+   text-align: center;
+}
+
+.about-section h2, .gallery-section h2, .footer h3 {
+   font-size: 32px;
+   color: #ff69b4;
+}
+
+.gallery-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   justify-content: center;
+}
+
+.gallery-item {
+   flex: 1 1 calc(33% - 20px);
+   margin: 10px;
+}
+
+.gallery-item img {
+   max-width: 100%;
+   border-radius: 10px;
+}
+
+/* Music Control Button */
+.music-control {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+}
+
+.music-control button {
+   background-color: #ff69b4;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 10px;
+}
+
+.music-control button:hover {
+   background-color: #ff85c1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   header nav ul {
+       flex-direction: column;
+   }
+
+   .gallery-item {
+       flex: 1 1 calc(50% - 20px);
+   }
+}
+
+@media (max-width: 480px) {
+   .hero {
+       height: 60vh;
+   }
+
+   .gallery-item {
+       flex: 1 1 100%;
+   }
+}
